@@ -11,8 +11,7 @@
 #!date=2026-02-09
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, tnc), (AND, ((OR, ((DOMAIN-KEYWORD, -bjlgy), (DOMAIN-KEYWORD, -alisc), (DOMAIN-KEYWORD, -aliec), (DOMAIN-KEYWORD, -alisg))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, zijieapi.com)))))), REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, api-play), (DOMAIN-KEYWORD, -normal-), (DOMAIN-KEYWORD, -core-), (DOMAIN-KEYWORD, -search-), (DOMAIN-KEYWORD, log))), (DOMAIN-SUFFIX, amemv.com)), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, -normal-), (DOMAIN-KEYWORD, log))), (DOMAIN-SUFFIX, amemv.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, -normal.zijieapi.com)), REJECT
 DOMAIN, api.amemv.com, REJECT
