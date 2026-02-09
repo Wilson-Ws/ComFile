@@ -12,6 +12,7 @@
 
 [Rule]
 AND, ((OR, ((DOMAIN-KEYWORD, -normal-), (DOMAIN-KEYWORD, log))), (DOMAIN-SUFFIX, amemv.com)), REJECT
+AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-ARRAY
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
 AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, -normal.zijieapi.com)), REJECT
 DOMAIN, api.amemv.com, REJECT
@@ -421,4 +422,4 @@ DOMAIN-SUFFIX, rixengine.com, REJECT
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ reject
 
 [MitM]
-hostname=video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+hostname=log*.amemv.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
