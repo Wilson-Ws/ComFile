@@ -12,18 +12,17 @@
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, mon))), (DOMAIN-SUFFIX, fqnovel.com)), REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, mon))), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, mon), (DOMAIN-KEYWORD, polaris))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-ARRAY
 DOMAIN, api.amemv.com, REJECT
-DOMAIN, log.snssdk.com, REJECT
 DOMAIN, mon.toutiaocloud.com, REJECT
 DOMAIN, mon.toutiaocloud.net, REJECT
 DOMAIN-KEYWORD, ahdohpiechei.com, REJECT-ARRAY
 DOMAIN-KEYWORD, souajki.net, REJECT
 DOMAIN-KEYWORD, vegslb.com, REJECT
 DOMAIN-KEYWORD, siomxity.net, REJECT
-DEST-PORT, >=10000, REJECT
+DEST-PORT, >=5000, REJECT
 
 [MitM]
 hostname=log*.amemv.com, *.ahdohpiechei.com
