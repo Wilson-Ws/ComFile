@@ -22,7 +22,7 @@ DOMAIN-KEYWORD, ahdohpiechei.com, REJECT-ARRAY
 DOMAIN-KEYWORD, souajki.net, REJECT
 DOMAIN-KEYWORD, vegslb.com, REJECT
 DOMAIN-KEYWORD, siomxity.net, REJECT
-DEST-PORT, >=5000, REJECT
+DEST-PORT, >7000, REJECT
 
 [MitM]
 hostname=log*.amemv.com, *.ahdohpiechei.com
