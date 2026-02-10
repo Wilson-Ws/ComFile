@@ -15,7 +15,6 @@ AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFI
 AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, mon))), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, mon), (DOMAIN-KEYWORD, polaris))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-ARRAY
-DOMAIN, api.amemv.com, REJECT
 DOMAIN, mon.toutiaocloud.com, REJECT
 DOMAIN, mon.toutiaocloud.net, REJECT
 DOMAIN-KEYWORD, ahdohpiechei.com, REJECT-ARRAY
