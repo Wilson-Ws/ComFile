@@ -69,7 +69,6 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=DIRECT, tag=CN REGIO
 [Plugin]
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
 https://raw.githubusercontent.com/Wilson-Ws/comfile/refs/heads/main/Loon/LPX/Advertisers.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
@@ -78,14 +77,12 @@ https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, enabled=true
 https://raw.githubusercontent.com/Wilson-Ws/ComFile/refs/heads/main/Loon/LPX/Tieba_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Umetrip_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
-https://raw.githubusercontent.com/Wilson-Ws/comfile/refs/heads/main/Loon/LPX/DragonRead.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
