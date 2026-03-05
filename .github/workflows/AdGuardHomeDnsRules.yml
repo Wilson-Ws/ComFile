@@ -1,8 +1,8 @@
-name: Update DNS China Rules
+name: AdGuardHome DNS China Rules
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天北京时间上午 8 点运行
+    - cron: '0 0 1,16 * *'
   workflow_dispatch:      # 允许手动触发执行
 
 jobs:
@@ -19,21 +19,21 @@ jobs:
         run: |
           # 1. 下载原始文件
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list -o raw_cn.txt
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bing.list -o raw_bing.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list -o raw_microsoft.txt
 
           # 2. 清洗并排序（去重、去注释、去空行、去 +.）
           grep -v '^#' raw_cn.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > cn_clean.tmp
-          grep -v '^#' raw_bing.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > bing_clean.tmp
+          grep -v '^#' raw_microsoft.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > microsoft_clean.tmp
 
-          # 3. 从 cn 列表中剔除 bing 列表中的域名
-          comm -23 cn_clean.tmp bing_clean.tmp > filtered.tmp
+          # 3. 从 cn 列表中剔除 microsoft 列表中的域名
+          comm -23 cn_clean.tmp microsoft_clean.tmp > filtered.tmp
 
           # 4. 格式化并追加 DNS 地址
           # 目标格式: [/example.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
           sed 's/^/\[\//; s/$/\/\]https:\/\/223.5.5.5\/dns-query https:\/\/223.6.6.6\/dns-query/' filtered.tmp > dns-China.txt
 
           # 5. 清理临时文件
-          rm raw_cn.txt raw_bing.txt cn_clean.tmp bing_clean.tmp filtered.tmp
+          rm raw_cn.txt raw_microsoft.txt cn_clean.tmp microsoft_clean.tmp filtered.tmp
 
       - name: Commit and Push
         run: |
