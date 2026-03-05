@@ -13791,25 +13791,6 @@
 [/azad.asia/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/azbingxin.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/azbq.org/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdna.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnb.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnc.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnd.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdne.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnf.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdng.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnh.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdni.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnj.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnk.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnl.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnm.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnn.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdno.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnp.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnq.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdnr.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/azchcdns.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/azetac.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/azf010.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/azhimalayanvh.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -24118,7 +24099,6 @@
 [/cn.pool.ntp.org/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/cn.sc.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/cn.vc/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/cn.windowssearch.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/cn0-6.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/cn006.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/cn010w.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -28630,7 +28610,6 @@
 [/dcement.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dcexport.work/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dcf365.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/dcg.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dcg123.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dcgqt.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dcgsi.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -29120,11 +29099,9 @@
 [/devashen.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/devask.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/devbean.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/devblogs.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/devclub.cc/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/devedu.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/developer.htcvive.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/developer.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/developer.vive.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/developers.pub/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/developwechat.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -30143,7 +30120,6 @@
 [/dl-kg.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dl-meitu.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dl-rc.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/dl.delivery.mp.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dl0728.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dl23zx.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/dl2link.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -31013,8 +30989,6 @@
 [/downkr.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/downkuai.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/download-cn.msi.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/download.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/download.visualstudio.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/downloadcenter.samsung.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/downloads.ltd/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/downok.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -36627,7 +36601,6 @@
 [/fs-eliza.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/fs-qiyun.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/fs-yld.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/fs.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/fs0757.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/fs121.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/fs1982.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -70498,7 +70471,6 @@
 [/myunlu.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/myusmile.online/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/myvipsalon.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/myvs.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/myvsoncloud.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/myvsuat.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/mywakao.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -73683,7 +73655,6 @@
 [/oemnew.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/oempromo.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/oemresource.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/oemsoc.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/oemsocuat.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/oemssl.cn.cdn.cloudflare.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/oeob.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -73710,7 +73681,6 @@
 [/officeaid02.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/officebai.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/officebay.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/officecdn.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/officectrl.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/officemkt.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/officemktuat.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -83277,7 +83247,6 @@
 [/sdwtqqysj.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/sdwtqx.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/sdwtyy.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/sdx.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/sdxawy.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/sdxgty.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/sdxhce.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -87609,7 +87578,6 @@
 [/softscdn.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/softsz.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/softtest.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/software.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/softwarechn.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/softwarecn.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/softweek.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -88698,7 +88666,6 @@
 [/storeapi.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/storecorefulfillment.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/storeedge.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/storeedgefd.dsx.mp.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/storkapp.me/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/stormorai.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/story520.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -97654,7 +97621,6 @@
 [/vsaol.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vsbclub.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vsbuys.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/vscode.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vscops.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vsean.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vsearch.club/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -97792,7 +97758,6 @@
 [/vyin.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vynior.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vyuan8.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/vz.download.prss.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vz41.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vzan.cc/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/vzan.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -101177,8 +101142,6 @@
 [/wscloudvpn.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/wsclsb.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/wscn.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/wscont1.apps.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/wscont2.apps.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/wscp.shop/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/wscrm.net/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/wscso.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
@@ -101735,7 +101698,6 @@
 [/www.epsonconnect.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/www.gov.mo/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/www.htc.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-[/www.microsoft.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/www.nike.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/www.redhat.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
 [/www.samsung.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
