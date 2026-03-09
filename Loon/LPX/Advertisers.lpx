@@ -8,7 +8,7 @@
 #!loon_version=
 #!homepage=https://github.com/Wilson-Ws
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
-#!date=2026-02-13
+#!date=2026-03-09
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
@@ -436,4 +436,4 @@ DOMAIN-SUFFIX, amazon-adsystem.com, REJECT
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ reject
 
 [MitM]
-hostname=video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, log*.amemv.com, *.ahdohpiechei.com
+hostname=video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, log*.amemv.com, *.ahdohpiechei.com, *.vegslb.com, log.snssdk.com
