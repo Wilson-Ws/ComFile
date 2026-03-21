@@ -3,19 +3,16 @@
 #!openUrl=https://apps.apple.com/app/id414478124
 #!author=Wilson-Ws[https://github.com/Wilson-Ws]
 #!tag=去广告
-#!system=
-#!system_version=
-#!loon_version=3.2.4(787)
 #!homepage=https://github.com/Wilson-Ws
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
-#!date=2025-12-19
+#!date=
 
 [Rule]
-#微信卡包图片
-DOMAIN-SUFFIX, wst.wxapp.tc.qq.com, REJECT-IMG
+AND, ((DOMAIN-KEYWORD, pcdn), (DOMAIN-KEYWORD, tencent)), REJECT
+AND, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, wechat)), REJECT
+DOMAIN, cube.weixinbridge.com, REJECT
+DOMAIN, report.trade.weixin.qq.com, REJECT
+DOMAIN, sh.servicewechat.com, REJECT
 DOMAIN-KEYWORD, dns.weixin.qq.com, REJECT
-
-[Rewrite]
-
-[MitM]
-hostname= wst.wxapp.tc.qq.com
+#微信卡包图片
+DOMAIN-SUFFIX, wst.wxapp.tc.qq.com, REJECT
