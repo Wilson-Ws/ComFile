@@ -19,7 +19,6 @@ jobs:
 
       - name: Fetch and Process Domain Lists
         run: |
-          # 1. 下载并提取内容 (yq 提取 payload 数组)
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/cn.yaml | yq '.payload[]' | sort > cn_full.txt
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.yaml | yq '.payload[]' | sort > ms_full.txt
           
@@ -29,20 +28,18 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download.list > game_dl.txt
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/win-update.yaml | yq '.payload[]' > win_upd.txt
 
-          # 2. 执行差集运算 (A - B)
-          # comm -23 选出只在第一个文件中存在的行
           comm -23 cn_full.txt ms_full.txt > cn_cleaned.txt
           comm -23 games_full.txt steam_full.txt > games_cleaned.txt
 
-          # 3. 合并所有列表并去重
           cat cn_cleaned.txt games_cleaned.txt game_dl.txt win_upd.txt | \
           sed 's/^\.//g' | \
           sed '/^#/d' | \
           sed '/^$/d' | \
           sort -u > final_domains.txt
 
-          # 4. 转换为 AdGuardHome 格式: [/example.com/]https://223.6.6.6/dns-query
-          sed 's|^|[/|; s|$|/]https://223.6.6.6/dns-query|' final_domains.txt > dns-China.txt
+          grep -v '^#' final_domains.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > final_domains.tmp
+
+          sed 's|^|[/|; s|$|/]https://223.6.6.6/dns-query|' final_domains.tmp > dns-China.txt
 
       - name: Commit and Push
         run: |
