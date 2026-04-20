@@ -17,23 +17,57 @@ jobs:
 
       - name: Process Rules
         run: |
-          # 1. 下载原始文件
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list -o raw_cn.txt
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list -o raw_microsoft.txt
-
-          # 2. 清洗并排序（去重、去注释、去空行、去 +.）
-          grep -v '^#' raw_cn.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > cn_clean.tmp
-          grep -v '^#' raw_microsoft.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > microsoft_clean.tmp
-
-          # 3. 从 cn 列表中剔除 microsoft 列表中的域名
-          comm -23 cn_clean.tmp microsoft_clean.tmp > filtered.tmp
-
-          # 4. 格式化并追加 DNS 地址
+          # 1. 下载多个数据源的原始文件
+          echo "Downloading domain lists..."
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.list -o raw_cn.txt 2>/dev/null || echo "Warning: cn.list download failed"
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list -o raw_microsoft.txt 2>/dev/null || echo "Warning: microsoft.list download failed"
+          
+          # 补充数据源：v2ray的CN域名列表（包含更多国内域名）
+          curl -sSL https://raw.githubusercontent.com/v2fly/domain-list-community/release/cn.txt -o v2ray_cn.txt 2>/dev/null || echo "Warning: v2ray cn list failed"
+          
+          # Apple CDN等国内服务
+          curl -sSL https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt -o loyalsoldier_direct.txt 2>/dev/null || echo "Warning: loyalsoldier direct list failed"
+          
+          # 2. 清洗并合并所有列表
+          echo "Cleaning and merging lists..."
+          
+          # 处理各个文件，移除注释、空行、prefix markers
+          for file in raw_cn.txt raw_microsoft.txt v2ray_cn.txt loyalsoldier_direct.txt; do
+            if [ -f "$file" ]; then
+              grep -v '^#' "$file" | grep -v '^$' | grep -v '^@' | sed 's/^\+\.//' | sed 's/^regex://' > "${file}.clean"
+            fi
+          done
+          
+          # 合并所有清洗后的列表
+          cat *.clean 2>/dev/null | sort -u > merged_domains.txt
+          
+          # 3. 从 CN 列表中剔除需要代理的域名（比如 microsoft 等）
+          if [ -f raw_microsoft.txt.clean ]; then
+            comm -23 <(sort -u merged_domains.txt) <(sort -u raw_microsoft.txt.clean) > filtered.tmp
+          else
+            cp merged_domains.txt filtered.tmp
+          fi
+          
+          # 4. 移除可能导致问题的模式
+          # 移除过于宽泛的规则（如单字母域名）
+          # 移除已知的问题域名
+          sed '/^[a-z0-9]\.$/d' filtered.tmp | \
+          grep -v '^localhost$' | \
+          grep -v '^localhost\.localdomain$' | \
+          sort -u > filtered_final.tmp
+          
+          # 5. 格式化为 AdGuardHome DNS 地址
           # 目标格式: [/example.com/]https://223.5.5.5/dns-query https://223.6.6.6/dns-query
-          sed 's/^/\[\//; s/$/\/\]https:\/\/223.5.5.5\/dns-query https:\/\/223.6.6.6\/dns-query/' filtered.tmp > dns-China.txt
-
-          # 5. 清理临时文件
-          rm raw_cn.txt raw_microsoft.txt cn_clean.tmp microsoft_clean.tmp filtered.tmp
+          echo "Formatting rules..."
+          sed 's/^/[\//' | sed 's/$/\/]https:\/\/223.5.5.5\/dns-query https:\/\/223.6.6.6\/dns-query/' filtered_final.tmp > dns-China.txt
+          
+          # 6. 统计信息
+          RULE_COUNT=$(wc -l < dns-China.txt)
+          echo "Generated DNS rules: $RULE_COUNT"
+          
+          # 7. 清理临时文件
+          echo "Cleaning up..."
+          rm -f raw_cn.txt raw_microsoft.txt v2ray_cn.txt loyalsoldier_direct.txt *.clean merged_domains.txt filtered.tmp filtered_final.tmp
 
       - name: Commit and Push
         run: |
@@ -43,6 +77,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes detected."
           else
-            git commit -m "Auto-update dns-China.txt with Alidns: $(date +'%Y-%m-%d %H:%M:%S')"
+            RULE_COUNT=$(wc -l < dns-China.txt)
+            git commit -m "Auto-update dns-China.txt: $RULE_COUNT rules - $(date +'%Y-%m-%d %H:%M:%S')"
             git push
           fi
