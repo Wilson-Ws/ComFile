@@ -1,4 +1,4 @@
-name: Sync and Merge BlockAdvertisers
+name: Update BlockAdvertisers Rules
 
 on:
   workflow_dispatch:
@@ -37,7 +37,6 @@ jobs:
           }
           local_path = "Loon/LPX/Advertisers.lpx"
           output_path = "Loon/LPX/BlockAdvertisers.lpx"
-          anchor_line = "AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT"
 
           scraper = cloudscraper.create_scraper()
           try:
@@ -48,8 +47,15 @@ jobs:
               print(f"下载失败: {e}")
               exit(1)
 
-          target_to_remove = 'AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT'
-          processed_remote = remote_content.replace(target_to_remove, "").strip()
+          target_text = '\n\nAND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT'
+          processed_remote = remote_content.replace(target_text, "")
+
+          if os.path.exists(local_path):
+              with open(local_path, "r", encoding="utf-8") as f:
+                  local_content = f.read()
+          else:
+              print("本地 Advertisers.lpx 未找到，仅保存远程处理后的内容")
+              local_content = ""
 
           def get_section(text, section_name):
               pattern = rf"\[{section_name}\](.*?)(?=\n\[|$)"
@@ -57,38 +63,26 @@ jobs:
               return match.group(1).strip() if match else ""
 
           header = "\n".join([l for l in processed_remote.splitlines() if l.startswith("#!")])
+          
           remote_rules = get_section(processed_remote, "Rule")
+          local_rules = get_section(local_content, "Rule")
+
           remote_mitm = get_section(processed_remote, "MitM").replace("hostname=", "")
-
-          if os.path.exists(local_path):
-              with open(local_path, "r", encoding="utf-8") as f:
-                  local_content = f.read()
-              
-              local_rules = get_section(local_content, "Rule")
-              local_mitm = get_section(local_content, "MitM").replace("hostname=", "")
-
-              if anchor_line in local_rules:
-                  parts = local_rules.split(anchor_line)
-                  merged_rules = parts[0].strip() + "\n" + remote_rules + "\n" + anchor_line + parts[1]
-              else:
-                  merged_rules = local_rules + "\n" + remote_rules
-          else:
-              merged_rules = remote_rules
-              local_mitm = ""
-
-          merged_rules = "\n".join([line.strip() for line in merged_rules.splitlines() if line.strip()])
-
+          local_mitm = get_section(local_content, "MitM").replace("hostname=", "")
+          
           full_mitm = ", ".join(filter(None, [local_mitm, remote_mitm]))
 
-          final_file = f"{header}\n\n[Rule]\n{merged_rules}\n\n[MitM]\nhostname={full_mitm}"
+          final_file = f"{header}\n\n[Rule]\n{local_rules}\n{remote_rules}\n\n[MitM]\nhostname={full_mitm}"
 
           os.makedirs(os.path.dirname(output_path), exist_ok=True)
           with open(output_path, "w", encoding="utf-8") as f:
-              f.write(final_file.strip())
+              f.write(final_file)
+          
+          print(f"文件已成功保存至 {output_path}")
 
-      - name: Commit and Push
+      - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add Loon/LPX/BlockAdvertisers.lpx
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update and Merge: BlockAdvertisers.lpx" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update: BlockAdvertisers.lpx" && git push)
