@@ -72,7 +72,7 @@ jobs:
           
           full_mitm = ", ".join(filter(None, [local_mitm, remote_mitm]))
 
-          final_file = f"{header}\n\n[Rule]\n{local_rules}\n{remote_rules}\n\n[MitM]\nhostname={full_mitm}"
+          final_file = f"{header}\n\n[Rule]\n{local_rules}\n\n{remote_rules}\n\n[MitM]\nhostname={full_mitm}"
 
           os.makedirs(os.path.dirname(output_path), exist_ok=True)
           with open(output_path, "w", encoding="utf-8") as f:
