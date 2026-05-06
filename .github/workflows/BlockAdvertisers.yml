@@ -30,16 +30,15 @@ jobs:
           import re
           import os
 
-          # 1. 配置信息
           url = "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx"
           headers = {
               "user-agent": "Loon/945 CFNetwork/3860.600.12 Darwin/25.5.0",
               "accept-language": "zh-CN,zh-Hans;q=0.9"
           }
           local_path = "Loon/LPX/Advertisers.lpx"
-          output_path = "Loon/LPX/BlockAdvertisers.lpx" # 保存到的位置
+          output_path = "Loon/LPX/BlockAdvertisers.lpx"
+          anchor_line = "AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT"
 
-          # 2. 下载远程文件
           scraper = cloudscraper.create_scraper()
           try:
               response = scraper.get(url, headers=headers)
@@ -49,52 +48,47 @@ jobs:
               print(f"下载失败: {e}")
               exit(1)
 
-          # 3. 剔除指定内容 (使用 re.escape 确保特殊符号匹配准确)
-          target_text = 'AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT'
-          # 使用字符串直接替换以确保百分之百匹配
-          processed_remote = remote_content.replace(target_text, "")
+          target_to_remove = 'AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT'
+          processed_remote = remote_content.replace(target_to_remove, "").strip()
 
-          # 4. 读取本地 Advertisers.lpx
-          if os.path.exists(local_path):
-              with open(local_path, "r", encoding="utf-8") as f:
-                  local_content = f.read()
-          else:
-              print("本地 Advertisers.lpx 未找到，仅保存远程处理后的内容")
-              local_content = ""
-
-          # 5. 提取各部分并合并
           def get_section(text, section_name):
               pattern = rf"\[{section_name}\](.*?)(?=\n\[|$)"
               match = re.search(pattern, text, re.DOTALL)
               return match.group(1).strip() if match else ""
 
-          # 提取头部信息 (#!开头的内容)
           header = "\n".join([l for l in processed_remote.splitlines() if l.startswith("#!")])
-          
-          # 合并 Rule
           remote_rules = get_section(processed_remote, "Rule")
-          local_rules = get_section(local_content, "Rule")
-          
-          # 合并 MitM
           remote_mitm = get_section(processed_remote, "MitM").replace("hostname=", "")
-          local_mitm = get_section(local_content, "MitM").replace("hostname=", "")
-          
-          full_mitm = ", ".join(filter(None, [remote_mitm, local_mitm]))
 
-          # 6. 构造最终文件
-          final_file = f"{header}\n\n[Rule]\n{remote_rules}\n{local_rules}\n\n[MitM]\nhostname={full_mitm}"
+          if os.path.exists(local_path):
+              with open(local_path, "r", encoding="utf-8") as f:
+                  local_content = f.read()
+              
+              local_rules = get_section(local_content, "Rule")
+              local_mitm = get_section(local_content, "MitM").replace("hostname=", "")
 
-          # 确保目录存在并写入
+              if anchor_line in local_rules:
+                  parts = local_rules.split(anchor_line)
+                  merged_rules = parts[0].strip() + "\n" + remote_rules + "\n" + anchor_line + parts[1]
+              else:
+                  merged_rules = local_rules + "\n" + remote_rules
+          else:
+              merged_rules = remote_rules
+              local_mitm = ""
+
+          merged_rules = "\n".join([line.strip() for line in merged_rules.splitlines() if line.strip()])
+
+          full_mitm = ", ".join(filter(None, [local_mitm, remote_mitm]))
+
+          final_file = f"{header}\n\n[Rule]\n{merged_rules}\n\n[MitM]\nhostname={full_mitm}"
+
           os.makedirs(os.path.dirname(output_path), exist_ok=True)
           with open(output_path, "w", encoding="utf-8") as f:
-              f.write(final_file)
-          
-          print(f"文件已成功保存至 {output_path}")
+              f.write(final_file.strip())
 
-      - name: Commit and Push changes
+      - name: Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add Loon/LPX/BlockAdvertisers.lpx
-          # 只有在内容有变化时才提交，防止 Action 报错
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update: BlockAdvertisers.lpx" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto Update and Merge: BlockAdvertisers.lpx" && git push)
