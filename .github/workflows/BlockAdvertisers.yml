@@ -1,0 +1,32 @@
+name: Update BlockAdvertisers File
+
+on:
+  workflow_dispatch: # 支持手动触发
+  schedule:
+    - cron: '0 0 * * *' # 每天凌晨自动运行一次
+
+jobs:
+  download_and_save:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download File with Custom Headers
+        run: |
+          curl -H ":scheme: https" \
+               -H "accept: */*" \
+               -H "user-agent: Loon/945 CFNetwork/3860.600.12 Darwin/25.5.0" \
+               -H "accept-language: zh-CN,zh-Hans;q=0.9" \
+               -H "accept-encoding: gzip, deflate, br" \
+               -L "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx" \
+               --compressed \
+               -o "BlockAdvertisers.lpx" 
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update BlockAdvertisers.lpx (Auto)" || exit 0
+          git push
