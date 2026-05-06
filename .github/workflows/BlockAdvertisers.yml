@@ -1,9 +1,9 @@
 name: Update BlockAdvertisers File
 
 on:
-  workflow_dispatch: # 支持手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # 每天凌晨自动运行一次
+    - cron: '0 0 * * *'
 
 jobs:
   download_and_save:
@@ -12,21 +12,41 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Download File with Custom Headers
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install cloudscraper
+
+      - name: Download File using cloudscraper
+        shell: python
         run: |
-          curl -H ":scheme: https" \
-               -H "accept: */*" \
-               -H "user-agent: Loon/945 CFNetwork/3860.600.12 Darwin/25.5.0" \
-               -H "accept-language: zh-CN,zh-Hans;q=0.9" \
-               -H "accept-encoding: gzip, deflate, br" \
-               -L "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx" \
-               --compressed \
-               -o "BlockAdvertisers.lpx" 
+          import cloudscraper
+          
+          url = "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx"
+          # 配置你提供的 Headers
+          headers = {
+              "user-agent": "Loon/945 CFNetwork/3860.600.12 Darwin/25.5.0",
+              "accept-language": "zh-CN,zh-Hans;q=0.9"
+          }
+          
+          scraper = cloudscraper.create_scraper()
+          response = scraper.get(url, headers=headers)
+          
+          if response.status_code == 200:
+              with open("BlockAdvertisers.lpx", "wb") as f:
+                  f.write(response.content)
+              print("下载成功！")
+          else:
+              print(f"下载失败，状态码: {response.status_code}")
+              exit(1)
 
       - name: Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "Update BlockAdvertisers.lpx (Auto)" || exit 0
+          git add BlockAdvertisers.lpx
+          git commit -m "Update BlockAdvertisers.lpx" || exit 0
           git push
