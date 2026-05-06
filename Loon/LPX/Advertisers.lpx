@@ -11,34 +11,33 @@
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-DICT
-AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
-DOMAIN, mon.toutiaocloud.com, REJECT
-DOMAIN, mon.toutiaocloud.net, REJECT
-DOMAIN, cmpassport.com, REJECT
-DOMAIN, ahdohpiechei.com, REJECT-DICT
-DOMAIN, souajki.net, REJECT
-DOMAIN, vegalb.com, REJECT
-DOMAIN, vegslb.com, REJECT
-DOMAIN, siomxity.net, REJECT
-DOMAIN, sealaly.net, REJECT
-DOMAIN, 0kkkkkt.com, REJECT
-DOMAIN, dahhxxttxs.com, REJECT
-DOMAIN, nexusedgeio.com, REJECT
-DOMAIN, ldhy.click, REJECT
-DOMAIN, cjjd14.com, REJECT
-DOMAIN, manlaxycloud.com, REJECT
-DOMAIN, qtaeixd.com, REJECT
-DOMAIN, ydycdn.com, REJECT
-DOMAIN, jomoxc.com, REJECT
-DOMAIN, ksyungslb.com, REJECT
-DOMAIN, ctydoh.cn, REJECT
-DOMAIN, z1cdn.com, REJECT
-DOMAIN, z1cdn.com, REJECT
-DOMAIN, dizgslb.com, REJECT
-DOMAIN, jspcdn.cn, REJECT
-DOMAIN, qnqcdn.net, REJECT
-DOMAIN, bjmxy.net, REJECT
-DOMAIN, wuchuyun.com, REJECT
+DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
+DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
+DOMAIN-KEYWORD, cmpassport.com, REJECT
+DOMAIN-KEYWORD, ahdohpiechei.com, REJECT-DICT
+DOMAIN-KEYWORD, souajki.net, REJECT
+DOMAIN-KEYWORD, vegalb.com, REJECT
+DOMAIN-KEYWORD, vegslb.com, REJECT
+DOMAIN-KEYWORD, siomxity.net, REJECT
+DOMAIN-KEYWORD, sealaly.net, REJECT
+DOMAIN-KEYWORD, 0kkkkkt.com, REJECT
+DOMAIN-KEYWORD, dahhxxttxs.com, REJECT
+DOMAIN-KEYWORD, nexusedgeio.com, REJECT
+DOMAIN-KEYWORD, ldhy.click, REJECT
+DOMAIN-KEYWORD, cjjd14.com, REJECT
+DOMAIN-KEYWORD, manlaxycloud.com, REJECT
+DOMAIN-KEYWORD, qtaeixd.com, REJECT
+DOMAIN-KEYWORD, ydycdn.com, REJECT
+DOMAIN-KEYWORD, jomoxc.com, REJECT
+DOMAIN-KEYWORD, ksyungslb.com, REJECT
+DOMAIN-KEYWORD, ctydoh.cn, REJECT
+DOMAIN-KEYWORD, z1cdn.com, REJECT
+DOMAIN-KEYWORD, z1cdn.com, REJECT
+DOMAIN-KEYWORD, dizgslb.com, REJECT
+DOMAIN-KEYWORD, jspcdn.cn, REJECT
+DOMAIN-KEYWORD, qnqcdn.net, REJECT
+DOMAIN-KEYWORD, bjmxy.net, REJECT
+DOMAIN-KEYWORD, wuchuyun.com, REJECT
 
 [MitM]
 hostname=log*.amemv.com, *.ahdohpiechei.com, *.vegslb.com, log.snssdk.com
