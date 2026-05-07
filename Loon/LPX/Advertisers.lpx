@@ -38,6 +38,7 @@ DOMAIN-KEYWORD, jspcdn.cn, REJECT
 DOMAIN-KEYWORD, qnqcdn.net, REJECT
 DOMAIN-KEYWORD, bjmxy.net, REJECT
 DOMAIN-KEYWORD, wuchuyun.com, REJECT
+DOMAIN-KEYWORD, wuchuyun.net, REJECT
 
 [MitM]
 hostname=log*.amemv.com, *.ahdohpiechei.com, *.vegslb.com, log.snssdk.com
