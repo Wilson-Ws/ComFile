@@ -13,25 +13,20 @@ AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad)
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-DICT
 DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
-DOMAIN-KEYWORD, ahdohpiechei.com, REJECT-DICT
 DOMAIN-KEYWORD, souajki.net, REJECT
 DOMAIN-KEYWORD, vegalb.com, REJECT
 DOMAIN-KEYWORD, vegslb.com, REJECT
 DOMAIN-KEYWORD, siomxity.net, REJECT
 DOMAIN-KEYWORD, sealaly.net, REJECT
 DOMAIN-KEYWORD, 0kkkkkt.com, REJECT
-DOMAIN-KEYWORD, dahhxxttxs.com, REJECT
 DOMAIN-KEYWORD, nexusedgeio.com, REJECT
 DOMAIN-KEYWORD, ldhy.click, REJECT
 DOMAIN-KEYWORD, cjjd14.com, REJECT
 DOMAIN-KEYWORD, manlaxycloud.com, REJECT
 DOMAIN-KEYWORD, qtaeixd.com, REJECT
-DOMAIN-KEYWORD, ydycdn.com, REJECT
 DOMAIN-KEYWORD, jomoxc.com, REJECT
 DOMAIN-KEYWORD, ksyungslb.com, REJECT
 DOMAIN-KEYWORD, ctydoh.cn, REJECT
-DOMAIN-KEYWORD, z1cdn.com, REJECT
-DOMAIN-KEYWORD, z1cdn.com, REJECT
 DOMAIN-KEYWORD, dizgslb.com, REJECT
 DOMAIN-KEYWORD, jspcdn.cn, REJECT
 DOMAIN-KEYWORD, qnqcdn.net, REJECT
@@ -40,4 +35,4 @@ DOMAIN-KEYWORD, wuchuyun.com, REJECT
 DOMAIN-KEYWORD, wuchuyun.net, REJECT
 
 [MitM]
-hostname=log*.amemv.com, *.ahdohpiechei.com, *.vegslb.com, log.snssdk.com
+hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com
