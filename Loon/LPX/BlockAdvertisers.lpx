@@ -16,7 +16,6 @@ AND, ((DOMAIN-KEYWORD, series), (DOMAIN-SUFFIX, douyinvod.com)), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-DICT
 DOMAIN, bytelink100-ws-lf.amemv.com, REJECT
-DOMAIN, frontier-aweme-lf-ipainner.amemv.com, REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
@@ -41,7 +40,6 @@ DOMAIN-KEYWORD, wuchuyun.com, REJECT
 DOMAIN-KEYWORD, wuchuyun.net, REJECT
 DOMAIN-KEYWORD, comfylink.com, REJECT
 DOMAIN-KEYWORD, ndcpp.com, REJECT
-DOMAIN-KEYWORD, awememusicpgc.amemv.com, REJECT
 
 DOMAIN-KEYWORD, adstrategy, REJECT
 
