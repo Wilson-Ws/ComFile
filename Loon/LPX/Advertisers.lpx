@@ -37,6 +37,7 @@ DOMAIN-KEYWORD, wuchuyun.com, REJECT
 DOMAIN-KEYWORD, wuchuyun.net, REJECT
 DOMAIN-KEYWORD, comfylink.com, REJECT
 DOMAIN-KEYWORD, ndcpp.com, REJECT
+DOMAIN-KEYWORD, kuiniuca.com, REJECT
 
 [MitM]
 hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com
