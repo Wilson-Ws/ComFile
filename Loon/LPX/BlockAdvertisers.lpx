@@ -12,6 +12,7 @@
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
+AND, ((DOMAIN-KEYWORD, series), (DOMAIN-SUFFIX, douyinvod.com)), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT-DICT
 DOMAIN, bytelink100-ws-lf.amemv.com, REJECT
