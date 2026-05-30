@@ -49,6 +49,7 @@ DOMAIN-SUFFIX, wasu.tv, REJECT
 DOMAIN-SUFFIX, just95.net, REJECT
 DOMAIN-SUFFIX, ahdohpiechei.com, REJECT
 DOMAIN-SUFFIX, qrstuvwxyzab.com, REJECT
+DOMAIN-KEYWORD, kuiniuca.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
 
