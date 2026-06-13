@@ -7,7 +7,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'true'
+        default: 'false'
         type: choice
         options:
           - true
@@ -15,7 +15,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "openwrt"
+        default: "immortalwrt"
         type: choice
         options:
           - openwrt
@@ -165,9 +165,6 @@ jobs:
           [[ -e "${CONFIG_FILE}" ]] && cp -f ${CONFIG_FILE} openwrt/.config
           chmod +x ${DIY_P2_SH}
           cd openwrt/
-          echo "CONFIG_TARGET_mediatek=y" >> .config
-          echo "CONFIG_TARGET_mediatek_filogic=y" >> .config
-          echo "CONFIG_TARGET_mediatek_filogic_DEVICE_h3c_nx30-pro=y" >> .config
           ${{ github.workspace }}/${DIY_P2_SH} "${{ inputs.use_ccache }}"
 
       - name: Download package
@@ -215,6 +212,10 @@ jobs:
           echo -e "ccache directory size:"
           du -sh $(pwd)/.ccache 2>/dev/null || echo "No ccache directory found."
 
+          grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
+          [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
+          echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
+
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Clean up build files and reclaim disk space
@@ -225,21 +226,21 @@ jobs:
           cd openwrt/
           [[ -d "output" ]] || mkdir output
           cp -f .config output/config
-          ls -A | grep -vE '^(output|\.ccache)$' | xargs rm -rf || true
+           
+          # Preserve firmware for uploading
+          [[ -d "bin/targets" ]] && cp -rf bin/targets output/firmware
+          echo "FIRMWARE=openwrt/output/firmware" >> $GITHUB_ENV
 
+          # Remove everything except output and .ccache directories
+          ls -A | grep -vE '^(output|\.ccache)$' | xargs rm -rf || true
+           
           # Export build metadata
           df -hT ${PWD}
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-      - name: Upload firmware directory
-        uses: actions/upload-artifact@v4
-        if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
-        with:
-          name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-          path: ${{ env.FIRMWARE }}
-
-      - name: Upload firmware to release
+      - name: Upload firmware to artifacts and release
         uses: softprops/action-gh-release@v2
+        if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
         with:
           tag: ${{ env.build_tag }}-$(date +"%Y.%m.%d-%H%M")-${{ env.DEVICE_NAME }}
           files: ${{ env.FIRMWARE }}/*
