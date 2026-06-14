@@ -224,19 +224,15 @@ jobs:
         id: clean
         if: ${{ steps.compile.outputs.status == 'success' && !cancelled() }}
         run: |
-          # Clean up build artifacts and reclaim disk space
           cd openwrt/
-          [[ -d "output" ]] || mkdir output
+          mkdir -p ${{ github.workspace }}/openwrt_output
           cp -f .config output/config
-           
-          # Preserve firmware for uploading
-          [[ -d "bin/targets" ]] && cp -rf bin/targets output/firmware
-          echo "FIRMWARE=openwrt/output/firmware" >> $GITHUB_ENV
 
-          # Remove everything except output and .ccache directories
+          find bin/targets/ -type f \( -name "*factory.bin" -o -name "*sysupgrade.bin" -o -name "*ubi" \) -exec cp -f {} ${{ github.workspace }}/openwrt_output/ \;
+          echo "FIRMWARE=${{ github.workspace }}/openwrt_output" >> $GITHUB_ENV
+
           ls -A | grep -vE '^(output|\.ccache)$' | xargs rm -rf || true
            
-          # Export build metadata
           df -hT ${PWD}
           echo "status=success" >> ${GITHUB_OUTPUT}
 
@@ -244,7 +240,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
         with:
-          tag: ${{ env.RELEASE_TAG }}
+          tag_name: ${{ env.RELEASE_TAG }}
           files: ${{ env.FIRMWARE }}/*
           gh_token: ${{ secrets.GITHUB_TOKEN }}
           body: |
