@@ -64,22 +64,11 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        [ -e $CONFIG_FILE ] && cp $CONFIG_FILE openwrt/.config
-        chmod +x $DIY_P2_SH
-        cd openwrt
-        
-        # 核心：直接注入 H3C NX30Pro 的 Board Target 配置
-        echo "CONFIG_TARGET_mediatek=y" >> .config
-        echo "CONFIG_TARGET_mediatek_filogic=y" >> .config
-        echo "CONFIG_TARGET_mediatek_filogic_DEVICE_h3c_nx30-pro=y" >> .config
-        
-        # 常用基础组件（可根据需求增删）
-        echo "CONFIG_PACKAGE_luci=y" >> .config
-        echo "CONFIG_PACKAGE_luci-theme-bootstrap=y" >> .config
-        echo "CONFIG_PACKAGE_luci-i18n-base-zh-cn=y" >> .config
-        
-        $GITHUB_WORKSPACE/$DIY_P2_SH
-        make defconfig
+        [[ -d "files" ]] && mv -f files openwrt/files
+        [[ -e "${CONFIG_FILE}" ]] && cp -f ${CONFIG_FILE} openwrt/.config
+        chmod +x ${DIY_P2_SH}
+        cd openwrt/
+        ${{ github.workspace }}/${DIY_P2_SH}
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@main
