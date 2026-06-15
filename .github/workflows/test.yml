@@ -190,11 +190,7 @@ jobs:
       - name: Cache ccache
         uses: actions/cache@v5
         with:
-          path: |
-            /builder/openwrt/.ccache
-            /builder/openwrt/staging_dir/hostpkg
-            /builder/openwrt/staging_dir/target-*
-            /builder/openwrt/staging_dir/toolchain-*
+          path: /builder/openwrt/.ccache
           key: openwrt-${{ env.REPO_NAME }}-${{ env.source_hash }}
           restore-keys: |
             openwrt-${{ env.REPO_NAME }}-
