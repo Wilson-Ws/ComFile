@@ -11,6 +11,7 @@
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com)))), REJECT
 AND, ((DOMAIN-KEYWORD, series), (DOMAIN-SUFFIX, douyinvod.com)), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, -normal-lf), (OR, ((DOMAIN-SUFFIX, amemv.com), (DOMAIN-KEYWORD, zijieapi.com), (DOMAIN-KEYWORD, ecombdapi.com)))), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-SUFFIX, amemv.com)), REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
 DOMAIN, privacy.zijieapi.com, REJECT
@@ -34,7 +35,6 @@ DOMAIN-SUFFIX, ndcpp.com, REJECT
 DOMAIN-SUFFIX, pkoplink.com, REJECT
 DOMAIN-SUFFIX, qiezibenpao.com, REJECT
 DOMAIN-SUFFIX, qnqcdn.net, REJECT
-DOMAIN-SUFFIX, qrstuvwxyzab.com, REJECT
 DOMAIN-SUFFIX, qtaeixd.com, REJECT
 DOMAIN-SUFFIX, sealaly.net, REJECT
 DOMAIN-SUFFIX, siomxity.net, REJECT
@@ -52,4 +52,4 @@ DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
 
 [MitM]
-hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com, *ad*.byteimg.com, *.ahdohpiechei.com
+hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com, *ad*.byteimg.com, *.ahdohpiechei.com, *-normal-lf.amemv.com, *-normal-lf.zijieapi.com, *-normal-lf.ecombdapi.com
