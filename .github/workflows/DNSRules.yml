@@ -28,8 +28,8 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download.list > game_dl.txt
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/win-update.yaml | yq '.payload[]' > win_upd.txt
 
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tiktok.yaml > tiktok.txt
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml | yq '.payload[]' > ai.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.yaml > tiktok.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.yaml | yq '.payload[]' > ai.txt
 
           comm -23 cn_full.txt ms_full.txt > cn_cleaned.txt
           comm -23 games_full.txt steam_full.txt > games_cleaned.txt
