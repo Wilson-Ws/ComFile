@@ -8,7 +8,6 @@
 #!date=
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, -alismart-), (DOMAIN-SUFFIX, douyinvod.com)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
