@@ -1,4 +1,4 @@
-name: Merge Rule Files
+name: Merge Rule Lists
 
 on:
   schedule:
@@ -13,16 +13,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Download and Merge Files
+    - name: Download, Merge and Append Rules
       run: |
+        > AiandTiktok.list
 
-        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/tiktok.list" | grep -v >> merged.yaml
+        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/tiktok.list" >> AiandTiktok.list
 
-        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/category-ai-!cn.list" | grep -v >> merged.list
+        echo "" >> rules.list
+        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/category-ai-!cn.list" >> AiandTiktok.list
 
-        echo "IP-CIDR,8.8.8.8/32,no-resolve" >> merged.yaml
+        echo "" >> rules.list
+        echo "IP-CIDR,8.8.8.8/32,no-resolve" >> AiandTiktok.list
 
-        mv merged.list ./AiandTiktok.list
+        sed -i '/^$/N;/^\n$/D' AiandTiktok.list
 
     - name: Commit and Push
       run: |
