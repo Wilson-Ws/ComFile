@@ -21,7 +21,7 @@ jobs:
 
         curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml" | grep -v "^payload:" >> merged.yaml
 
-        echo "  - IP-CIDR,8.8.8.8/32" >> merged.yaml
+        echo "    - IP-CIDR,8.8.8.8/32" >> merged.yaml
 
         mv merged.yaml ./AiandTiktok.yaml
 
