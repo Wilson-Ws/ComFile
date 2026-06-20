@@ -1,0 +1,60 @@
+name: AdGuardHome DNS China Rules
+
+on:
+  schedule:
+    - cron: '0 0 1,16 * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/bin/yq
+          sudo chmod +x /usr/bin/yq
+
+      - name: Fetch and Process Domain Lists
+        run: |
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/cn.yaml | yq '.payload[]' | sort > cn_full.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.yaml | yq '.payload[]' | sort > ms_full.txt
+          
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-games.yaml | yq '.payload[]' | sort > games_full.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/steam.yaml | yq '.payload[]' | sort > steam_full.txt
+          
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-game-platforms-download.yaml | yq '.payload[]' | sort > game_dl.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/win-update.yaml | yq '.payload[]' | sort > win_upd.txt
+
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.yaml | yq '.payload[]' | sort > tiktok.txt
+          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.yaml | yq '.payload[]' | sort > ai_nocn.txt
+
+          comm -23 cn_full.txt ms_full.txt > cn_cleaned.txt
+          comm -23 games_full.txt steam_full.txt > games_cleaned.txt
+
+          cat cn_cleaned.txt games_cleaned.txt game_dl.txt win_upd.txt | \
+          sed 's/^\.//g; /^#/d; /^$/d' | sort -u > final_china_domains.tmp
+
+          sed 's|^|[/|; s|$|/]https://223.6.6.6/dns-query|' final_china_domains.tmp > dns-China-a.txt
+
+          cat tiktok.txt ai_nocn.txt | \
+          sed 's/^\.//g; /^#/d; /^$/d' | sort -u > final_nonchina_domains.tmp
+
+          sed 's|^|[/|; s|$|/]https://8.8.8.8/dns-query|' final_nonchina_domains.tmp > dns-China-b.txt
+
+          echo "https://8.8.4.4/dns-query" > dns-china.txt
+          echo "https://1.1.1.1/dns-query" >> dns-china.txt
+
+          cat dns-China-a.txt >> dns-china.txt
+          cat dns-China-a.txt >> dns-china.txt
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add dns-china.txt
+          git commit -m "Update dns-china.txt: $(date +'%Y-%m-%d %H:%M:%S')" || exit 0
+          git push
