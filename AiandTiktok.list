@@ -34,7 +34,8 @@ DOMAIN,roovza-launches.appsflyersdk.com
 DOMAIN,roovza.inapps.appsflyersdk.com
 DOMAIN,roovza.launches.appsflyersdk.com
 DOMAIN,roovza.skadsdk.appsflyersdk.com
-DOMAIN-SUFFIX,analytics.tiktok.comDOMAIN,copilot-proxy.githubusercontent.com
+DOMAIN-SUFFIX,analytics.tiktok.com
+DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-workspace.githubnext.com
 DOMAIN,copilotprodattachments.blob.core.windows.net
 DOMAIN,ai.google.dev
@@ -192,4 +193,5 @@ DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,ciciaicdn.com
 DOMAIN-SUFFIX,dola.com
 DOMAIN,o33249.ingest.sentry.io
-DOMAIN,browser-intake-datadoghq.comIP-CIDR,8.8.8.8/32,no-resolve
+DOMAIN,browser-intake-datadoghq.com
+IP-CIDR,8.8.8.8/32,no-resolve
