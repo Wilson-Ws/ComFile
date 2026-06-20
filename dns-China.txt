@@ -1,202 +1,201 @@
 https://8.8.4.4/dns-query
 https://1.1.1.1/dns-query
-[/    - DOMAIN,p16-tiktokcdn-com.akamaized.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN,roovza-launches.appsflyersdk.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN,roovza.inapps.appsflyersdk.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN,roovza.launches.appsflyersdk.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN,roovza.skadsdk.appsflyersdk.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,analytics.tiktok.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,bytedapm.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,byteoversea.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,muscdn.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,musical.ly/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tik-tokapi.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktok-minis.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktok-row.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktok.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn-eu.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn-us.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn-us.com.edgesuite.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn.com.akamaized.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokcdn.com.edgesuite.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokd.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokd.org/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokeu-cdn.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokglobalshopv.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokminis.us/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokrow-cdn.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokv.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokv.com.edgekey.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokv.com.edgesuite.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokv.eu/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokv.us/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokw.eu/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,tiktokw.us/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,ttcdn-us.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,ttlivecdn.com/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,ttoverseaus.net/]https://8.8.8.8/dns-query
-[/    - DOMAIN-SUFFIX,ttwstatic.com/]https://8.8.8.8/dns-query
-[/DOMAIN,ai.google.dev/]https://8.8.8.8/dns-query
-[/DOMAIN,alkalicore-pa.clients6.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN,alkalimakersuite-pa.clients6.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN,antigravity-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,antigravity.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,browser-intake-datadoghq.com/]https://8.8.8.8/dns-query
-[/DOMAIN,cloudaicompanion.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,cloudcode-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,copilot-proxy.githubusercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN,copilot-telemetry-service.githubusercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN,copilot-telemetry.githubusercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN,copilot-workspace.githubnext.com/]https://8.8.8.8/dns-query
-[/DOMAIN,copilotprodattachments.blob.core.windows.net/]https://8.8.8.8/dns-query
-[/DOMAIN,daily-cloudcode-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,notebooklm-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,notebooklm.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN,o33249.ingest.sentry.io/]https://8.8.8.8/dns-query
-[/DOMAIN,openaiapi-site.azureedge.net/]https://8.8.8.8/dns-query
-[/DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net/]https://8.8.8.8/dns-query
-[/DOMAIN,openaicom.imgix.net/]https://8.8.8.8/dns-query
-[/DOMAIN,openaicomproductionae4b.blob.core.windows.net/]https://8.8.8.8/dns-query
-[/DOMAIN,ppl-ai-file-upload.s3.amazonaws.com/]https://8.8.8.8/dns-query
-[/DOMAIN,pplx-res.cloudinary.com/]https://8.8.8.8/dns-query
-[/DOMAIN,production-openaicom-storage.azureedge.net/]https://8.8.8.8/dns-query
-[/DOMAIN,servd-anthropic-website.b-cdn.net/]https://8.8.8.8/dns-query
-[/DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,agentclientprotocol.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,ai.studio/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,aicode.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,aida.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,aisandbox-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,aistudio.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,anthropic.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,antigravity-unleash.goog/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,antigravity.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,anythingllm.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,arena.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,bard.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cerebras.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,chat.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,chatgpt.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,chatgpt.livekit.cloud/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,chutes.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cici.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,ciciai.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,ciciaicdn.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,clau.de/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,claude.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,claude.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,claudemcpclient.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,claudemcpcontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,claudeusercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,clawhub.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,clipdrop.co/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,codeium.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,codeiumdata.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,coderabbit.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,coderabbit.gallery.vsassets.io/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cohere.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cohere.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,comfy.org/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,comfyci.org/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,comfyregistry.org/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,copilot.microsoft.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,coze.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,crewai.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,crixet.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cursor-cdn.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cursor.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cursor.sh/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,cursorapi.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,deepmind.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,deepmind.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,devin.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,diabrowser.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,diabrowser.engineering/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,dify.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,dola.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,duck.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,elevenlabs.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,elevenlabs.io/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,envato-static.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,envato.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,envatousercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,gateway.ai.cloudflare.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,geller-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,gemini.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,gemini.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,gemini.gstatic.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,generativeai.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,generativelanguage.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,githubcopilot.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,grok.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,grok.x.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,groq.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,h2o.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,hf.co/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,hf.space/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,host.livekit.cloud/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,huggingface.co/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,jasper.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,jules.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,jules.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,kiro.dev/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,labs.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,labs.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,langchain.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,liveperson.net/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,lmstudio.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,lovart.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,lpsnmedia.net/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,makersuite.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,manus.im/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,manuscdn.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,marscode.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,meta.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,midjourney.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,minimax.io/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,mistral.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,mozilla.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,notebooklm.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,notebooklm.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,oaistatic.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,oaistatsig.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,oaiusercontent.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,ollama.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,opal.google/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,opal.google.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openai.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openart.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openclaw.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openrouter.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,openspec.dev/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,oystermercury.top/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,perplexity.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,perplexity.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,plannotator.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,poe.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,poecdn.net/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,pplx.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,qoder.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,robinfrontend-pa.googleapis.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,sider.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,sora.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,spicywriter.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,stitch.withgoogle.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,tapnow.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,themeforest.net/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,trae.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,turn.livekit.cloud/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,windsurf.build/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,windsurf.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,x.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,youmind.ai/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,youmind.com/]https://8.8.8.8/dns-query
-[/DOMAIN-SUFFIX,youmind.site/]https://8.8.8.8/dns-query
+[/    - +.analytics.tiktok.com/]https://8.8.8.8/dns-query
+[/    - +.bytedapm.com/]https://8.8.8.8/dns-query
+[/    - +.byteoversea.com/]https://8.8.8.8/dns-query
+[/    - +.muscdn.com/]https://8.8.8.8/dns-query
+[/    - +.musical.ly/]https://8.8.8.8/dns-query
+[/    - +.tik-tokapi.com/]https://8.8.8.8/dns-query
+[/    - +.tiktok-minis.com/]https://8.8.8.8/dns-query
+[/    - +.tiktok-row.net/]https://8.8.8.8/dns-query
+[/    - +.tiktok.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn-eu.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn-us.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn-us.com.edgesuite.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn.com.akamaized.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokcdn.com.edgesuite.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokd.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokd.org/]https://8.8.8.8/dns-query
+[/    - +.tiktokeu-cdn.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokglobalshopv.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokminis.us/]https://8.8.8.8/dns-query
+[/    - +.tiktokrow-cdn.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokv.com/]https://8.8.8.8/dns-query
+[/    - +.tiktokv.com.edgekey.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokv.com.edgesuite.net/]https://8.8.8.8/dns-query
+[/    - +.tiktokv.eu/]https://8.8.8.8/dns-query
+[/    - +.tiktokv.us/]https://8.8.8.8/dns-query
+[/    - +.tiktokw.eu/]https://8.8.8.8/dns-query
+[/    - +.tiktokw.us/]https://8.8.8.8/dns-query
+[/    - +.ttcdn-us.com/]https://8.8.8.8/dns-query
+[/    - +.ttlivecdn.com/]https://8.8.8.8/dns-query
+[/    - +.ttoverseaus.net/]https://8.8.8.8/dns-query
+[/    - +.ttwstatic.com/]https://8.8.8.8/dns-query
+[/    - p16-tiktokcdn-com.akamaized.net/]https://8.8.8.8/dns-query
+[/    - roovza-launches.appsflyersdk.com/]https://8.8.8.8/dns-query
+[/    - roovza.inapps.appsflyersdk.com/]https://8.8.8.8/dns-query
+[/    - roovza.launches.appsflyersdk.com/]https://8.8.8.8/dns-query
+[/    - roovza.skadsdk.appsflyersdk.com/]https://8.8.8.8/dns-query
+[/+.agentclientprotocol.com/]https://8.8.8.8/dns-query
+[/+.ai.studio/]https://8.8.8.8/dns-query
+[/+.aicode.googleapis.com/]https://8.8.8.8/dns-query
+[/+.aida.googleapis.com/]https://8.8.8.8/dns-query
+[/+.aisandbox-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/+.aistudio.google.com/]https://8.8.8.8/dns-query
+[/+.anthropic.com/]https://8.8.8.8/dns-query
+[/+.antigravity-unleash.goog/]https://8.8.8.8/dns-query
+[/+.antigravity.google/]https://8.8.8.8/dns-query
+[/+.anythingllm.com/]https://8.8.8.8/dns-query
+[/+.arena.ai/]https://8.8.8.8/dns-query
+[/+.bard.google.com/]https://8.8.8.8/dns-query
+[/+.cerebras.ai/]https://8.8.8.8/dns-query
+[/+.chat.com/]https://8.8.8.8/dns-query
+[/+.chatgpt.com/]https://8.8.8.8/dns-query
+[/+.chatgpt.livekit.cloud/]https://8.8.8.8/dns-query
+[/+.chutes.ai/]https://8.8.8.8/dns-query
+[/+.cici.com/]https://8.8.8.8/dns-query
+[/+.ciciai.com/]https://8.8.8.8/dns-query
+[/+.ciciaicdn.com/]https://8.8.8.8/dns-query
+[/+.clau.de/]https://8.8.8.8/dns-query
+[/+.claude.ai/]https://8.8.8.8/dns-query
+[/+.claude.com/]https://8.8.8.8/dns-query
+[/+.claudemcpclient.com/]https://8.8.8.8/dns-query
+[/+.claudemcpcontent.com/]https://8.8.8.8/dns-query
+[/+.claudeusercontent.com/]https://8.8.8.8/dns-query
+[/+.clawhub.ai/]https://8.8.8.8/dns-query
+[/+.clipdrop.co/]https://8.8.8.8/dns-query
+[/+.codeium.com/]https://8.8.8.8/dns-query
+[/+.codeiumdata.com/]https://8.8.8.8/dns-query
+[/+.coderabbit.ai/]https://8.8.8.8/dns-query
+[/+.coderabbit.gallery.vsassets.io/]https://8.8.8.8/dns-query
+[/+.cohere.ai/]https://8.8.8.8/dns-query
+[/+.cohere.com/]https://8.8.8.8/dns-query
+[/+.comfy.org/]https://8.8.8.8/dns-query
+[/+.comfyci.org/]https://8.8.8.8/dns-query
+[/+.comfyregistry.org/]https://8.8.8.8/dns-query
+[/+.copilot.microsoft.com/]https://8.8.8.8/dns-query
+[/+.coze.com/]https://8.8.8.8/dns-query
+[/+.crewai.com/]https://8.8.8.8/dns-query
+[/+.crixet.com/]https://8.8.8.8/dns-query
+[/+.cursor-cdn.com/]https://8.8.8.8/dns-query
+[/+.cursor.com/]https://8.8.8.8/dns-query
+[/+.cursor.sh/]https://8.8.8.8/dns-query
+[/+.cursorapi.com/]https://8.8.8.8/dns-query
+[/+.deepmind.com/]https://8.8.8.8/dns-query
+[/+.deepmind.google/]https://8.8.8.8/dns-query
+[/+.devin.ai/]https://8.8.8.8/dns-query
+[/+.diabrowser.com/]https://8.8.8.8/dns-query
+[/+.diabrowser.engineering/]https://8.8.8.8/dns-query
+[/+.dify.ai/]https://8.8.8.8/dns-query
+[/+.dola.com/]https://8.8.8.8/dns-query
+[/+.duck.ai/]https://8.8.8.8/dns-query
+[/+.elevenlabs.com/]https://8.8.8.8/dns-query
+[/+.elevenlabs.io/]https://8.8.8.8/dns-query
+[/+.envato-static.com/]https://8.8.8.8/dns-query
+[/+.envato.com/]https://8.8.8.8/dns-query
+[/+.envatousercontent.com/]https://8.8.8.8/dns-query
+[/+.gateway.ai.cloudflare.com/]https://8.8.8.8/dns-query
+[/+.geller-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/+.gemini.google/]https://8.8.8.8/dns-query
+[/+.gemini.google.com/]https://8.8.8.8/dns-query
+[/+.gemini.gstatic.com/]https://8.8.8.8/dns-query
+[/+.generativeai.google/]https://8.8.8.8/dns-query
+[/+.generativelanguage.googleapis.com/]https://8.8.8.8/dns-query
+[/+.githubcopilot.com/]https://8.8.8.8/dns-query
+[/+.grok.com/]https://8.8.8.8/dns-query
+[/+.grok.x.com/]https://8.8.8.8/dns-query
+[/+.groq.com/]https://8.8.8.8/dns-query
+[/+.h2o.ai/]https://8.8.8.8/dns-query
+[/+.hf.co/]https://8.8.8.8/dns-query
+[/+.hf.space/]https://8.8.8.8/dns-query
+[/+.host.livekit.cloud/]https://8.8.8.8/dns-query
+[/+.huggingface.co/]https://8.8.8.8/dns-query
+[/+.jasper.ai/]https://8.8.8.8/dns-query
+[/+.jules.google/]https://8.8.8.8/dns-query
+[/+.jules.google.com/]https://8.8.8.8/dns-query
+[/+.kiro.dev/]https://8.8.8.8/dns-query
+[/+.labs.google/]https://8.8.8.8/dns-query
+[/+.labs.google.com/]https://8.8.8.8/dns-query
+[/+.langchain.com/]https://8.8.8.8/dns-query
+[/+.liveperson.net/]https://8.8.8.8/dns-query
+[/+.lmstudio.ai/]https://8.8.8.8/dns-query
+[/+.lovart.ai/]https://8.8.8.8/dns-query
+[/+.lpsnmedia.net/]https://8.8.8.8/dns-query
+[/+.makersuite.google.com/]https://8.8.8.8/dns-query
+[/+.manus.im/]https://8.8.8.8/dns-query
+[/+.manuscdn.com/]https://8.8.8.8/dns-query
+[/+.marscode.com/]https://8.8.8.8/dns-query
+[/+.meta.ai/]https://8.8.8.8/dns-query
+[/+.midjourney.com/]https://8.8.8.8/dns-query
+[/+.minimax.io/]https://8.8.8.8/dns-query
+[/+.mistral.ai/]https://8.8.8.8/dns-query
+[/+.mozilla.ai/]https://8.8.8.8/dns-query
+[/+.notebooklm.google/]https://8.8.8.8/dns-query
+[/+.notebooklm.google.com/]https://8.8.8.8/dns-query
+[/+.oaistatic.com/]https://8.8.8.8/dns-query
+[/+.oaistatsig.com/]https://8.8.8.8/dns-query
+[/+.oaiusercontent.com/]https://8.8.8.8/dns-query
+[/+.ollama.com/]https://8.8.8.8/dns-query
+[/+.opal.google/]https://8.8.8.8/dns-query
+[/+.opal.google.com/]https://8.8.8.8/dns-query
+[/+.openai.com/]https://8.8.8.8/dns-query
+[/+.openai.com.cdn.cloudflare.net/]https://8.8.8.8/dns-query
+[/+.openart.ai/]https://8.8.8.8/dns-query
+[/+.openclaw.ai/]https://8.8.8.8/dns-query
+[/+.openrouter.ai/]https://8.8.8.8/dns-query
+[/+.openspec.dev/]https://8.8.8.8/dns-query
+[/+.oystermercury.top/]https://8.8.8.8/dns-query
+[/+.perplexity.ai/]https://8.8.8.8/dns-query
+[/+.perplexity.com/]https://8.8.8.8/dns-query
+[/+.plannotator.ai/]https://8.8.8.8/dns-query
+[/+.poe.com/]https://8.8.8.8/dns-query
+[/+.poecdn.net/]https://8.8.8.8/dns-query
+[/+.pplx.ai/]https://8.8.8.8/dns-query
+[/+.proactivebackend-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/+.qoder.com/]https://8.8.8.8/dns-query
+[/+.robinfrontend-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/+.sider.ai/]https://8.8.8.8/dns-query
+[/+.sora.com/]https://8.8.8.8/dns-query
+[/+.spicywriter.com/]https://8.8.8.8/dns-query
+[/+.stitch.withgoogle.com/]https://8.8.8.8/dns-query
+[/+.tapnow.ai/]https://8.8.8.8/dns-query
+[/+.themeforest.net/]https://8.8.8.8/dns-query
+[/+.trae.ai/]https://8.8.8.8/dns-query
+[/+.turn.livekit.cloud/]https://8.8.8.8/dns-query
+[/+.windsurf.build/]https://8.8.8.8/dns-query
+[/+.windsurf.com/]https://8.8.8.8/dns-query
+[/+.x.ai/]https://8.8.8.8/dns-query
+[/+.youmind.ai/]https://8.8.8.8/dns-query
+[/+.youmind.com/]https://8.8.8.8/dns-query
+[/+.youmind.site/]https://8.8.8.8/dns-query
+[/ai.google.dev/]https://8.8.8.8/dns-query
+[/alkalicore-pa.clients6.google.com/]https://8.8.8.8/dns-query
+[/alkalimakersuite-pa.clients6.google.com/]https://8.8.8.8/dns-query
+[/antigravity-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/antigravity.googleapis.com/]https://8.8.8.8/dns-query
+[/browser-intake-datadoghq.com/]https://8.8.8.8/dns-query
+[/cloudaicompanion.googleapis.com/]https://8.8.8.8/dns-query
+[/cloudcode-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/copilot-proxy.githubusercontent.com/]https://8.8.8.8/dns-query
+[/copilot-telemetry-service.githubusercontent.com/]https://8.8.8.8/dns-query
+[/copilot-telemetry.githubusercontent.com/]https://8.8.8.8/dns-query
+[/copilot-workspace.githubnext.com/]https://8.8.8.8/dns-query
+[/copilotprodattachments.blob.core.windows.net/]https://8.8.8.8/dns-query
+[/daily-cloudcode-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/notebooklm-pa.googleapis.com/]https://8.8.8.8/dns-query
+[/notebooklm.googleapis.com/]https://8.8.8.8/dns-query
+[/o33249.ingest.sentry.io/]https://8.8.8.8/dns-query
+[/openaiapi-site.azureedge.net/]https://8.8.8.8/dns-query
+[/openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net/]https://8.8.8.8/dns-query
+[/openaicom.imgix.net/]https://8.8.8.8/dns-query
+[/openaicomproductionae4b.blob.core.windows.net/]https://8.8.8.8/dns-query
 [/payload:/]https://8.8.8.8/dns-query
+[/ppl-ai-file-upload.s3.amazonaws.com/]https://8.8.8.8/dns-query
+[/pplx-res.cloudinary.com/]https://8.8.8.8/dns-query
+[/production-openaicom-storage.azureedge.net/]https://8.8.8.8/dns-query
+[/servd-anthropic-website.b-cdn.net/]https://8.8.8.8/dns-query
+[/webchannel-alkalimakersuite-pa.clients6.google.com/]https://8.8.8.8/dns-query
 [/0.zone/]https://223.6.6.6/dns-query
 [/00.net/]https://223.6.6.6/dns-query
 [/000.link/]https://223.6.6.6/dns-query
