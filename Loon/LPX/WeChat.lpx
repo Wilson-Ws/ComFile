@@ -11,6 +11,9 @@
 AND, ((DOMAIN-KEYWORD, pcdn), (DOMAIN-KEYWORD, tencent)), REJECT
 AND, ((DOMAIN-KEYWORD, log), (DOMAIN-KEYWORD, wechat)), REJECT
 DOMAIN, cube.weixinbridge.com, REJECT
+DOMAIN, res.wx.qq.com, REJECT
+DOMAIN, mmec.wxqcloud.qq.com.cn, REJECT
+DOMAIN, launchwxacode.wxqcloud.qq.com.cn, REJECT
 DOMAIN, report.trade.weixin.qq.com, REJECT
 DOMAIN, sh.servicewechat.com, REJECT
 DOMAIN-KEYWORD, dns.weixin.qq.com, REJECT
