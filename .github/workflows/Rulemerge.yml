@@ -15,17 +15,18 @@ jobs:
 
     - name: Download, Merge and Append Rules
       run: |
-        > AiandTiktok.list
+        mkdir -p tmp_rules
 
-        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/tiktok.list" >> AiandTiktok.list
+        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/tiktok.list" > tmp_rules/file1.list
+        sed -i '$a\' tmp_rules/file1.list
 
-        echo "" >> rules.list
-        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/category-ai-!cn.list" >> AiandTiktok.list
+        curl -sL "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/classical/category-ai-!cn.list" > tmp_rules/file2.list
+        sed -i '$a\' tmp_rules/file2.list
 
-        echo "" >> rules.list
-        echo "IP-CIDR,8.8.8.8/32,no-resolve" >> AiandTiktok.list
+        echo "IP-CIDR,8.8.8.8/32,no-resolve" > tmp_rules/custom.list
+        sed -i '$a\' tmp_rules/custom.list
 
-        sed -i '/^$/N;/^\n$/D' AiandTiktok.list
+        cat tmp_rules/file1.list tmp_rules/file2.list tmp_rules/custom.list | sed '/^$/d' > AiandTiktok.list
 
     - name: Commit and Push
       run: |
