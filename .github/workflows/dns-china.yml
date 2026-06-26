@@ -28,8 +28,8 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-game-platforms-download.list > game_dl.txt
           curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/win-update.yaml | yq '.payload[]' > win_upd.txt
 
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.yaml | yq '.payload[]' | sort > tiktok.txt
-          curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.yaml | yq '.payload[]' | sort > ai_nocn.txt
+          #curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.yaml | yq '.payload[]' | sort > tiktok.txt
+          #curl -sSL https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.yaml | yq '.payload[]' | sort > ai_nocn.txt
 
           comm -23 cn_full.txt ms_full.txt > cn_cleaned.txt
           comm -23 games_full.txt steam_full.txt > games_cleaned.txt
@@ -44,19 +44,19 @@ jobs:
 
           sed 's|^|[/|; s|$|/]https://223.6.6.6/dns-query|' final_domains.tmp > dns-cn.txt
 
-          cat tiktok.txt ai_nocn.txt | \
-          sed 's/^\.//g' | \
-          sed '/^#/d' | \
-          sed '/^$/d' | \
-          sort -u > final_ai_domains.txt
+          #cat tiktok.txt ai_nocn.txt | \
+          #sed 's/^\.//g' | \
+          #sed '/^#/d' | \
+          #sed '/^$/d' | \
+          #sort -u > final_ai_domains.txt
 
-          grep -v '^#' final_ai_domains.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > final_ai_domains.tmp
+          #grep -v '^#' final_ai_domains.txt | grep -v '^$' | sed 's/^\+\.//' | sort -u > final_ai_domains.tmp
 
-          sed 's|^|[/|; s|$|/]https://8.8.8.8/dns-query|' final_ai_domains.tmp > dns-no-cn.txt
+          #sed 's|^|[/|; s|$|/]https://8.8.4.4/dns-query|' final_ai_domains.tmp > dns-no-cn.txt
 
-          echo "https://8.8.4.4/dns-query" > dns-china.txt
+          echo "https://8.8.8.8/dns-query" > dns-china.txt
           echo "https://1.1.1.1/dns-query" >> dns-china.txt
-          cat dns-no-cn.txt >> dns-china.txt
+          #cat dns-no-cn.txt >> dns-china.txt
           cat dns-cn.txt >> dns-china.txt
 
       - name: Commit and Push
