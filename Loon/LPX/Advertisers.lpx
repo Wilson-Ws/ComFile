@@ -8,9 +8,12 @@
 #!date=
 
 [Rule]
-AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, feedback), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, mssdk), (DOMAIN-KEYWORD, polaris))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+DOMAIN, abtest-ch.snssdk.com, REJECT
+DOMAIN, frontier-aweme-zjg-ipainner.amemv.com, REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
+DOMAIN, tr.byteurl.cn, REJECT
 DOMAIN, privacy.zijieapi.com, REJECT
 DOMAIN-SUFFIX, ahdohpiechei.com, REJECT
 DOMAIN-SUFFIX, ankltoken.com, REJECT
@@ -50,11 +53,13 @@ DOMAIN-SUFFIX, souajki.net, REJECT
 DOMAIN-SUFFIX, ugsdk.cn, REJECT
 DOMAIN-SUFFIX, vegalb.com, REJECT
 DOMAIN-SUFFIX, vegslb.com, REJECT
+DOMAIN-SUFFIX, wmzfylgdsz.com, REJECT
 DOMAIN-SUFFIX, wuchuyun.com, REJECT
 DOMAIN-SUFFIX, wuchuyun.net, REJECT
 DOMAIN-SUFFIX, xinqiucc.com, REJECT
 DOMAIN-SUFFIX, yingt.fun, REJECT
 DOMAIN-SUFFIX, z1cdn.com, REJECT
+DOMAIN-SUFFIX, zzcdnx.com, REJECT
 DOMAIN-SUFFIX, zhenidc.cn, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
