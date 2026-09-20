@@ -13,6 +13,7 @@
 [Rule]
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, feedback), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, mssdk), (DOMAIN-KEYWORD, polaris))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((DOMAIN-KEYWORD, analytics), (DOMAIN-SUFFIX, bytescm.com)), REJECT
 DOMAIN, abtest-ch.snssdk.com, REJECT
 DOMAIN, frontier-aweme-zjg-ipainner.amemv.com, REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
