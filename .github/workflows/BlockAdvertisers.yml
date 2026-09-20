@@ -47,8 +47,14 @@ jobs:
               print(f"下载失败: {e}")
               exit(1)
 
-          target_text = '\n\nAND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT'
-          processed_remote = remote_content.replace(target_text, "")
+          remove_items = [
+              '\n\nAND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT',
+              '\nDOMAIN, ads.cup.com.cn, REJECT',
+          ]
+
+          processed_remote = remote_content
+          for item in remove_items:
+              processed_remote = processed_remote.replace(item, "")
 
           if os.path.exists(local_path):
               with open(local_path, "r", encoding="utf-8") as f:
