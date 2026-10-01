@@ -531,4 +531,4 @@ DOMAIN-SUFFIX, tobidad.com, REJECT
 DOMAIN, ep7.facebook.com, REJECT
 
 [MitM]
-hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com, *.ahdohpiechei.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+hostname=*log*.amemv.com, *.vegslb.com, log.snssdk.com, *.ahdohpiechei.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
