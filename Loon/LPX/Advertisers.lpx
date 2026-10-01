@@ -66,4 +66,4 @@ DOMAIN-KEYWORD, mon.toutiaocloud.com, REJECT
 DOMAIN-KEYWORD, mon.toutiaocloud.net, REJECT
 
 [MitM]
-hostname=log*.amemv.com, *.vegslb.com, log.snssdk.com, *.ahdohpiechei.com
+hostname=*log*.amemv.com, *.vegslb.com, log.snssdk.com, *.ahdohpiechei.com
