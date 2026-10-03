@@ -12,11 +12,15 @@
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, feedback), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, bsync), (DOMAIN-KEYWORD, feedback), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, polaris), (DOMAIN-KEYWORD, saveu), (DOMAIN-KEYWORD, tnc))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, analytics), (DOMAIN-SUFFIX, bytescm.com)), REJECT
 DOMAIN, abtest-ch.snssdk.com, REJECT
-DOMAIN, sdktt.data.tianwenca.com, REJECT
+DOMAIN, frontier-aweme-zjg-ipainner.amemv.com, REJECT
+DOMAIN, keyhub.zijieapi.com, REJECT
+DOMAIN, mon.zijieapi.com, REJECT
 DOMAIN, privacy.zijieapi.com, REJECT
+DOMAIN, sdktt.data.tianwenca.com, REJECT
+DOMAIN, vcs-lf.zijieapi.com, REJECT
 DOMAIN-SUFFIX, ahdohpiechei.com, REJECT
 DOMAIN-SUFFIX, ankltoken.com, REJECT
 DOMAIN-SUFFIX, bdcgslb.com, REJECT
@@ -529,4 +533,4 @@ DOMAIN-SUFFIX, tobidad.com, REJECT
 DOMAIN, ep7.facebook.com, REJECT
 
 [MitM]
-hostname=*log*.amemv.com, *.vegslb.com, log.snssdk.com, *.ahdohpiechei.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
+hostname=*log*.amemv.com, log*.snssdk.com, bsync*.zijieapi.com, polaris*.zijieapi.com, saveu*.zijieapi.com, *.vegslb.com, *.ahdohpiechei.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
