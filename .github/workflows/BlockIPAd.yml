@@ -40,9 +40,9 @@ jobs:
             while IFS= read -r ip; do
               [[ -z "$ip" ]] && continue
               if [[ "$ip" == *:* ]]; then
-                rule="IP-CIDR6,${ip}/128,REJECT,no-resolve"
+                rule="IP-CIDR,${ip}/32,REJECT"
               else
-                rule="IP-CIDR,${ip}/32,REJECT,no-resolve"
+                rule="IP-CIDR6,${ip}/128,REJECT"
               fi
               if [[ -z "${seen[$rule]+x}" ]]; then
                 seen[$rule]=1
