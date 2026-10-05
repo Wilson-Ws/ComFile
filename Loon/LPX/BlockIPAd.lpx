@@ -1,0 +1,12 @@
+#!name=IP拦截器
+#!desc=Bytedance
+#!openUrl=
+#!author=Wilson-Ws[https://github.com/Wilson-Ws]
+#!tag=去广告
+#!homepage=https://github.com/Wilson-Ws
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Website_icon/120px/TencentAd.png
+#!date=
+
+[Rule]
+
+[MitM]
