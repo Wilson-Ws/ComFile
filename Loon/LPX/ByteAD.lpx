@@ -9,32 +9,31 @@
 
 [Rule]
 AND, ((DOMAIN-KEYWORD, log), (OR, ((DOMAIN-SUFFIX, amemv.com), (DOMAIN-SUFFIX, fqnovel.com), (DOMAIN-KEYWORD, snssdk.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
-AND,((DOMAIN-KEYWORD,tnc),(AND,((OR,((DOMAIN-KEYWORD,-bjlgy),(DOMAIN-KEYWORD,-alisc),(DOMAIN-KEYWORD,-aliec),(DOMAIN-KEYWORD,-alisg))),(OR,((DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,zijieapi.com)))))),REJECT
-AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, bsync), (DOMAIN-KEYWORD, feedback), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko), (DOMAIN-KEYWORD, mssdk), (DOMAIN-KEYWORD, polaris), (DOMAIN-KEYWORD, saveu))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, bjlgy), (DOMAIN-KEYWORD, alisc), (DOMAIN-KEYWORD, aliec), (DOMAIN-KEYWORD, alisg))), (OR, ((DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, zijieapi.com)))), REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, abtest), (DOMAIN-KEYWORD, ad), (DOMAIN-KEYWORD, game), (DOMAIN-KEYWORD, gecko))), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, analytics), (DOMAIN-SUFFIX, bytescm.com)), REJECT
 DOMAIN, abtest-ch.snssdk.com, REJECT
-DOMAIN, frontier-aweme-zjg-ipainner.amemv.com, REJECT
-DOMAIN, keyhub.zijieapi.com, REJECT
-DOMAIN, mcs.zijieapi.com, REJECT
-DOMAIN, mon.zijieapi.com, REJECT
-DOMAIN, timon.zijieapi.com, REJECT
+DOMAIN, tr.byteurl.cn, REJECT
 DOMAIN, privacy.zijieapi.com, REJECT
 DOMAIN, sdktt.data.tianwenca.com, REJECT
 DOMAIN, security.zijieapi.com, REJECT
-DOMAIN, vcs-lf.zijieapi.com, REJECT
+DOMAIN, security.snsssdk.com, REJECT
 DOMAIN-SUFFIX, ahdohpiechei.com, REJECT
 DOMAIN-SUFFIX, ankltoken.com, REJECT
 DOMAIN-SUFFIX, bdcgslb.com, REJECT
+DOMAIN-SUFFIX, beta456.com, REJECT
 DOMAIN-SUFFIX, bjmxy.net, REJECT
 DOMAIN-SUFFIX, bsgslb.cn, REJECT
 DOMAIN-SUFFIX, byte456.com, REJECT
+DOMAIN-SUFFIX, bytednsdoc.com, REJECT
+DOMAIN-SUFFIX, byteimg.com, REJECT
+DOMAIN-SUFFIX, bytetcc.com, REJECT
 DOMAIN-SUFFIX, cjjd14.com, REJECT
 DOMAIN-SUFFIX, comfylink.com, REJECT
 DOMAIN-SUFFIX, ctydoh.cn, REJECT
 DOMAIN-SUFFIX, dizgslb.com, REJECT
-DOMAIN-SUFFIX, ecombdapi.com, REJECT
-DOMAIN-SUFFIX, ecombdvod.com, REJECT
 DOMAIN-SUFFIX, fluxio.cn, REJECT
+DOMAIN-SUFFIX, in-neo.cn, REJECT
 DOMAIN-SUFFIX, jdcloudedge.com, REJECT
 DOMAIN-SUFFIX, jomoxc.com, REJECT
 DOMAIN-SUFFIX, jspcdn.cn, REJECT
@@ -60,6 +59,7 @@ DOMAIN-SUFFIX, souajki.net, REJECT
 DOMAIN-SUFFIX, ugsdk.cn, REJECT
 DOMAIN-SUFFIX, vegalb.com, REJECT
 DOMAIN-SUFFIX, vegslb.com, REJECT
+DOMAIN-SUFFIX, wasu.tv, REJECT
 DOMAIN-SUFFIX, wmzfylgdsz.com, REJECT
 DOMAIN-SUFFIX, wuchuyun.com, REJECT
 DOMAIN-SUFFIX, wuchuyun.net, REJECT
@@ -76,5 +76,5 @@ AND, ((PROTOCOL, QUIC), (OR, ((IP-CIDR, 117.156.0.0/16), (IP-CIDR, 117.175.0.0/1
 AND, ((PROTOCOL, QUIC), (OR, ((IP-CIDR, 120.203.0.0/16), (IP-CIDR, 120.220.0.0/16), (IP-CIDR, 150.138.220.0/24)))), REJECT
 AND, ((PROTOCOL, UDP), (OR, ((IP-CIDR, 110.249.0.0/16), (IP-CIDR, 101.126.0.0/16), (IP-CIDR, 111.63.0.0/16), (IP-CIDR, 111.225.0.0/16), (IP-CIDR, 221.178.56.0/24)))), REJECT
 
-[MitM]
-hostname=*log*.amemv.com, log*.snssdk.com, bsync*.zijieapi.com, mssdk*.zijieapi.com, polaris*.zijieapi.com, saveu*.zijieapi.com, *.vegslb.com, *.ahdohpiechei.com, keyhub.zijieapi.com, frontier-aweme-zjg-ipainner.amemv.com
+[MitM] 
+hostname=*log*.amemv.com, log*.snssdk.com, *.vegslb.com, *.ahdohpiechei.com
